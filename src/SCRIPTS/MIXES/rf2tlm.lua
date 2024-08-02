@@ -141,7 +141,7 @@ local RFSensors = {
     -- Main battery used capacity
     [0x1013]  = { name="Capa",    unit=UNIT_MAH,                 prec=0,    dec=decU16  },
     -- Main battery State-of-Charge / fuel level
-    [0x1015]  = { name="Bat%",    unit=UNIT_PERCENT,             prec=0,    dec=decU8   },
+    [0x1014]  = { name="Bat%",    unit=UNIT_PERCENT,             prec=0,    dec=decU8   },
 
     -- Main battery cell count
     [0x1020]  = { name="Cel#",    unit=UNIT_RAW,                 prec=0,    dec=decU8   },
