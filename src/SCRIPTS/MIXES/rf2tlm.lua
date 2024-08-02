@@ -140,7 +140,7 @@ local RFSensors = {
     [0x1012]  = { name="Curr",    unit=UNIT_AMPS,                prec=2,    dec=decU16  },
     -- Main battery used capacity
     [0x1013]  = { name="Capa",    unit=UNIT_MAH,                 prec=0,    dec=decU16  },
-    -- Main battery State-of-Charge / fuel level
+    -- Main battery charge / fuel level
     [0x1014]  = { name="Bat%",    unit=UNIT_PERCENT,             prec=0,    dec=decU8   },
 
     -- Main battery cell count
@@ -163,30 +163,43 @@ local RFSensors = {
     -- Throttle output %
     [0x1035]  = { name="Thr",     unit=UNIT_PERCENT,             prec=0,    dec=decS8   },
 
-    -- ESC voltage
+    -- ESC#1 voltage
     [0x1041]  = { name="EscV",    unit=UNIT_VOLTS,               prec=2,    dec=decU16  },
-    -- ESC current
+    -- ESC#1 current
     [0x1042]  = { name="EscI",    unit=UNIT_AMPS,                prec=2,    dec=decU16  },
-    -- ESC capacity/consumption
+    -- ESC#1 capacity/consumption
     [0x1043]  = { name="EscC",    unit=UNIT_MAH,                 prec=0,    dec=decU16  },
-    -- ESC eRPM
+    -- ESC#1 eRPM
     [0x1044]  = { name="EscR",    unit=UNIT_RPMS,                prec=0,    dec=decU16  },
-    -- ESC PWM/Power
+    -- ESC#1 PWM/Power
     [0x1045]  = { name="EscP",    unit=UNIT_PERCENT,             prec=1,    dec=decU16  },
-    -- ESC throttle
+    -- ESC#1 throttle
     [0x1046]  = { name="Esc%",    unit=UNIT_PERCENT,             prec=1,    dec=decU16  },
-    -- ESC temperature
+    -- ESC#1 temperature
     [0x1047]  = { name="EscT",    unit=UNIT_CELSIUS,             prec=0,    dec=decU8   },
-    -- ESC / BEC temperature
+    -- ESC#1 / BEC temperature
     [0x1048]  = { name="BecT",    unit=UNIT_CELSIUS,             prec=0,    dec=decU8   },
-    -- ESC / BEC voltage
+    -- ESC#1 / BEC voltage
     [0x1049]  = { name="BecV",    unit=UNIT_VOLTS,               prec=2,    dec=decU16  },
-    -- ESC / BEC current
+    -- ESC#1 / BEC current
     [0x104A]  = { name="BecI",    unit=UNIT_AMPS,                prec=2,    dec=decU16  },
-    -- ESC Status Flags
+    -- ESC#1 Status Flags
     [0x104E]  = { name="EscF",    unit=UNIT_RAW,                 prec=0,    dec=decU32  },
-    -- ESC Model Id
+    -- ESC#1 Model Id
     [0x104F]  = { name="Esc#",    unit=UNIT_RAW,                 prec=0,    dec=decU8   },
+
+    -- ESC#2 voltage
+    [0x1051]  = { name="Es2V",    unit=UNIT_VOLTS,               prec=2,    dec=decU16  },
+    -- ESC#2 current
+    [0x1052]  = { name="Es2I",    unit=UNIT_AMPS,                prec=2,    dec=decU16  },
+    -- ESC#2 capacity/consumption
+    [0x1053]  = { name="Es2C",    unit=UNIT_MAH,                 prec=0,    dec=decU16  },
+    -- ESC#2 eRPM
+    [0x1054]  = { name="Es2R",    unit=UNIT_RPMS,                prec=0,    dec=decU16  },
+    -- ESC#2 temperature
+    [0x1057]  = { name="Es2T",    unit=UNIT_CELSIUS,             prec=0,    dec=decU8   },
+    -- ESC#2 Model Id
+    [0x105F]  = { name="Es2#",    unit=UNIT_RAW,                 prec=0,    dec=decU8   },
 
     -- Combined ESC voltage
     [0x1080]  = { name="Vesc",    unit=UNIT_VOLTS,               prec=2,    dec=decU16  },
